@@ -1,0 +1,92 @@
+@import "src/styles/variables";
+
+.Hamburger {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  z-index: 10;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 13px 3px rgba(34, 60, 80, 0.2);
+
+  @media (min-width: 940px) {
+    display: none;
+  }
+
+  &__close {
+    font-size: 3rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 20;
+  }
+
+  &__menu {
+    width: 100%;
+    padding: 60px 10px 10px 10px;
+    min-height: 50vh;
+    min-width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__cart {
+    margin: 0 auto 30px auto;
+    font-size: 20px;
+    b {
+      color: $orange-color;
+    }
+
+    a {
+      color: $orange-color;
+      border-bottom: 1px solid $orange-color;
+      font-weight: 700;
+    }
+  }
+
+  &__search {
+    margin-bottom: 20px;
+  }
+
+  &__sort {
+    margin-bottom: 20px;
+  }
+
+  &__categories {
+
+    li {
+      padding: 10px;
+      cursor: pointer;
+
+      &:first-of-type {
+        font-weight: bold;
+        border: none;
+        font-size: 20px;
+        padding: 10px 0 0 0;
+        text-align: center;
+      }
+
+      &.active {
+        color: $orange-color;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.navBtn {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10;
+
+  @media (max-width: 940px) {
+    display: block;
+  }
+}

@@ -1,0 +1,78 @@
+@import "src/styles/variables";
+
+.PizzaBlock {
+  min-width: 28rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &__img {
+    width: 26rem;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__options {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: .7rem;
+    background-color: $gray-color;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      column-gap: .5rem;
+
+      &:first-of-type {
+        margin-bottom: 6px;
+      }
+
+      li {
+        flex: 1;
+        padding: .8rem 0;
+        border-radius: .5rem;
+        cursor: pointer;
+
+        &.inactive {
+          color: rgba(#2C2C2C, .25);
+          cursor: initial;
+        }
+
+        &.active {
+          background: #ffffff;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+          border-radius: 5px;
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+}

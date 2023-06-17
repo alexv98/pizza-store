@@ -1,0 +1,48 @@
+@import "src/styles/variables";
+
+.Sort {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .7rem;
+  position: relative;
+
+  &__img {
+    width: 2rem;
+    cursor: pointer;
+
+    &.rotate {
+      transform: scale(1, -1)
+    }
+  }
+
+  span {
+    color: $orange-color;
+    border-bottom: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  &__modal {
+    background-color: #fff;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    position: absolute;
+    top: 3rem;
+    right: 0;
+
+    li {
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(254, 95, 30, 0.05);
+      }
+
+      &.active {
+        background: rgba(254, 95, 30, 0.05);
+        color: $orange-color;
+        font-weight: 700;
+      }
+    }
+  }
+}

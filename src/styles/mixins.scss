@@ -1,0 +1,21 @@
+
+@mixin respondHome($breakpoint) {
+
+  @if $breakpoint == big-screen {
+    @media (max-width: 1480px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == medium-screen {
+    @media (max-width: 1380px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == small-screen {
+    @media (max-width: 1246px) {
+      @content
+    }
+  }
+}

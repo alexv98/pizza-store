@@ -1,0 +1,30 @@
+@import "src/styles/variables";
+
+.Search{
+  position: relative;
+
+  &__input {
+    min-width: 35%;
+    background-color: transparent ;
+    background-image: url('../../assets/img/icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 2.2rem;
+    padding: 1rem 3.3rem 1rem 3.3rem;
+    border: 1px solid #d7d7d7;
+    color: $black-color;
+    outline: none;
+    border-radius: .5rem;
+    font: inherit;
+    z-index: 2;
+  }
+
+  &__close {
+    position: absolute;
+    width: 1.8rem;
+    right: 1rem;
+    top: 1.2rem;
+    cursor: pointer;
+  }
+}
+
